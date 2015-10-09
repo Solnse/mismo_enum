@@ -1,7 +1,7 @@
 class CreateMismoEnums < ActiveRecord::Migration
   def up
     MismoEnum::ClassList::ENUMS.each { |n|
-      tname = "mismo_#{n.pluralize}".to_sym
+      tname = "mismo_enum_#{n.pluralize}".to_sym
 
       create_table tname do |t|
         t.string :name, null: false
@@ -12,14 +12,14 @@ class CreateMismoEnums < ActiveRecord::Migration
 
       if serial_sequence(tname, "id")
         ActiveRecord::Base.connection.
-          execute("DROP SEQUENCE mismo_#{n.pluralize}_id_seq CASCADE;")
+          execute("DROP SEQUENCE mismo_enum_#{n.pluralize}_id_seq CASCADE;")
       end
     }
   end
 
   def down
     MismoEnum::ClassList::ENUMS.each { |n|
-      tname = "mismo_#{n.pluralise}".to_sym
+      tname = "mismo_enum_#{n.pluralise}".to_sym
       drop_table tname
     }
   end

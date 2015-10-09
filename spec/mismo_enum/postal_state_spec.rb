@@ -1,12 +1,9 @@
 require 'spec_helper'
 
 module MismoEnum
-  RSpec.describe "MismoEnum::PostalState", type: :model do
+  RSpec.describe PostalState, type: :model do
     describe "enum table" do
-      let(:calif) { FactoryGirl.build(:postal_state,
-                                      id:           5,
-                                      name:        'CA',
-                                      description: 'California') }
+      let(:calif) { MismoEnum::PostalState.where(:name => 'CA').first }
       let(:all) { MismoEnum::PostalState.all }
 
       it "contains all 65 states and territories" do
@@ -21,7 +18,8 @@ module MismoEnum
         expect(calif.description).to eq('California')
       end
 
-      it "allows id to be assigned during creation" do
+      it "allows id to be assigned during creation by seed" do
+        # seed is already run before(:suite)
         expect(calif.id).to eq(5)
       end
     end
