@@ -27,9 +27,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
     MismoEnum::Engine.load_seed
     Rails.application.load_seed # loading seeds
-
-    #puts "post load seed: #{MismoEnum::Engine.load_seed}"
-
   end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
