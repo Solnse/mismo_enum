@@ -1,4 +1,4 @@
-= MismoEnum
+# MismoEnum
 
 MISMO Enum provides typical enumerations used in mortgage banking. This gem
 was originally created to pull code out and use commonly among various
