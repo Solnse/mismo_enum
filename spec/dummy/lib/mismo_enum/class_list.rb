@@ -19,6 +19,8 @@ module MismoEnum::ClassList
     loan_purpose_type
     prepayment_penalty_option_type
     refinance_cash_out_determination_type
+    mortgage_type
+    rate_lock_type
   }
 
   PROPERTY_ENUMS = %w{
