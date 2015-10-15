@@ -79,6 +79,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_marital_status_types", ["name"], name: "index_mismo_enum_marital_status_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_mortgage_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_mortgage_types", ["name"], name: "index_mismo_enum_mortgage_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_postal_states", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"
@@ -120,6 +127,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
   end
 
   add_index "mismo_enum_property_valuation_method_types", ["name"], name: "index_mismo_enum_property_valuation_method_types_on_name", unique: true, using: :btree
+
+  create_table "mismo_enum_rate_lock_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_rate_lock_types", ["name"], name: "index_mismo_enum_rate_lock_types_on_name", unique: true, using: :btree
 
   create_table "mismo_enum_refinance_cash_out_determination_types", force: :cascade do |t|
     t.string "name",        null: false

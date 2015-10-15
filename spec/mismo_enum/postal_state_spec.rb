@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module MismoEnum
   RSpec.describe PostalState, type: :model do
     describe "enum table" do

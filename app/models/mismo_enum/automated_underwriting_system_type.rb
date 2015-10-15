@@ -20,9 +20,7 @@ class MismoEnum::AutomatedUnderwritingSystemType < MismoEnum::Base
      [8, 'Clues', 'Bank of America'],
      [9, 'ECS', 'Wells Fargo'],
      [10, 'Strategyware', ''],
-     [11, 'Zippy', 'Chase'],
-     [12, 'Eric', 'ERIC'],
-     [13, 'Chad', 'CHAD']
+     [11, 'Zippy', 'Chase']
     ].each { |id, entry, desc| create(id:          id,
                                       name:        entry,
                                       description: desc) }
