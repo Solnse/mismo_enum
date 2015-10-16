@@ -11,21 +11,8 @@ class MismoEnum::PropertyValuationStateType < MismoEnum::Base
   end
 
   def self.seed
-    [[1, 'Manufactured', 'A factory built dwelling built in compliance with '+
-        'the Federal Manufactured Home Construction and Safety Standards in '+
-        'effect at the time the home was manufactured as evidenced by the HUD'+
-        ' label. (HUD Code Home)'],
-     [2, 'MobileHome', 'Dwelling unit constructed on a base frame which '+
-        'features wheels and axles to be used in transporting home from place'+
-        ' to place, does not meet HUD code.'],
-     [3, 'Modular', 'A factory built dwelling not on a permanent chassis.'],
-     [4, 'OnFrameModular', 'A factory built dwelling on a permanent chassis '+
-        'which does not have a HUD label.'],
-     [5, 'Other', ''],
-     [6, 'SiteBuilt', 'Describes construction process, indicating that most '+
-        'elements are created at the homes permanent site. May include some '+
-        'prefabricated components.']
-
+    [[1, 'Original', ''],
+     [2, 'Subsequent', '']
     ].each { |id, entry, desc| create(id: id,
                                       name:        entry,
                                       description: desc) }
