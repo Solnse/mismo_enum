@@ -1,9 +1,13 @@
-# app/models/mismo/automated_underwriting_system_type.rb
+# app/models/mismo_enum/automated_underwriting_system_type.rb
 # enum
 
 class MismoEnum::AutomatedUnderwritingSystemType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'The type of automated underwriting system used to evaluate the loan.'
+  end
 
   def self.seed
     [[1, 'DesktopUnderwriter', 'Fannie Mae'],

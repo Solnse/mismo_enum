@@ -1,9 +1,13 @@
-# app/models/mismo/loan_purpose_type.rb
+# app/models/mismo_enum/loan_purpose_type.rb
 # enum
 
 class MismoEnum::LoanPurposeType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'Specifies the purpose for which the loan proceeds will be used.'
+  end
 
   def self.seed
     [[1, 'Purchase', 'A loan made in association with the original purchase of'+

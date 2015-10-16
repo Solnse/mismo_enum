@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_construction_method_types", ["name"], name: "index_mismo_enum_construction_method_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_definition_of_value_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_definition_of_value_types", ["name"], name: "index_mismo_enum_definition_of_value_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_gender_types", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"
@@ -127,6 +134,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
   end
 
   add_index "mismo_enum_property_valuation_method_types", ["name"], name: "index_mismo_enum_property_valuation_method_types_on_name", unique: true, using: :btree
+
+  create_table "mismo_enum_property_valuation_state_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_property_valuation_state_types", ["name"], name: "index_mismo_enum_property_valuation_state_types_on_name", unique: true, using: :btree
 
   create_table "mismo_enum_rate_lock_types", force: :cascade do |t|
     t.string "name",        null: false

@@ -1,9 +1,14 @@
-# app/models/mismo/project_design_type.rb
+# app/models/mismo_enum/project_design_type.rb
 # enum
 
 class MismoEnum::ProjectDesignType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'This field specifies the type of design for the multiple unit buildings'+
+    ' in a project.'
+  end
 
   def self.seed
     [[1, 'GardenProject', ''],

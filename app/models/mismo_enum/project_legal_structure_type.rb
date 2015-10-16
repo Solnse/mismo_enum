@@ -1,9 +1,14 @@
-# app/models/mismo/project_legal_structure_type.rb
+# app/models/mismo_enum/project_legal_structure_type.rb
 # enum
 
 class MismoEnum::ProjectLegalStructureType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'Specifies the form of ownership that defines the quality and quantity of'+
+    ' ownership and rights to the individual unit owner.'
+  end
 
   def self.seed
     [[1, 'Condominium', 'A project that is legally formed as a condominium '+

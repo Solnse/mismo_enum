@@ -1,9 +1,13 @@
-# app/models/mismo/marital_status_type.rb
+# app/models/mismo_enum/marital_status_type.rb
 # enum
 
 class MismoEnum::MaritalStatusType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'The marital status of the party as disclosed by the party.'
+  end
 
   def self.seed
     [[1, 'Married', ''],

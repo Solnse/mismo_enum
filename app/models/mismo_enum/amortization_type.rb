@@ -1,9 +1,14 @@
-# app/models/mismo/amortization_type.rb
+# app/models/mismo_enum/amortization_type.rb
 # enum
 
 class MismoEnum::AmortizationType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'A classification or description of a loan or a group of loans generally'+
+    ' based on the changeability of the rate or payment over time.'
+  end
 
   def self.seed
     [[1, 'Fixed', 'A mortgage in which the interest rate and payments remain '+

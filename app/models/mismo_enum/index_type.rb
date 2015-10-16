@@ -1,9 +1,14 @@
-# app/models/mismo/index_type.rb
+# app/models/mismo_enum/index_type.rb
 # enum
 
 class MismoEnum::IndexType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'Specifies the general category of mortgage index upon which adjustments'+
+    ' will be based.'
+  end
 
   def self.seed
     [[1, 'LIBOR', 'London Interbank Offered Rate'],

@@ -1,9 +1,13 @@
-# app/models/mismo/gender_type.rb
+# app/models/mismo_enum/gender_type.rb
 # enum
 
 class MismoEnum::GenderType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'The borrowers or interviewers statement about the borrowers gender.'
+  end
 
   def self.seed
     [[1, 'Female', ''],

@@ -1,9 +1,13 @@
-# app/models/mismo/property_valuation_method_type.rb
+# app/models/mismo_enum/property_valuation_method_type.rb
 # enum
 
 class MismoEnum::PropertyValuationMethodType < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'Specifies the method by which the property value was assessed.'
+  end
 
   def self.seed
     [[1, 'AutomatedValuationModel', ''],

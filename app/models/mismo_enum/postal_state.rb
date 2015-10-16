@@ -1,6 +1,14 @@
+# app/models/mismo_enum/postal_state.rb
+# enum
+
 class MismoEnum::PostalState < MismoEnum::Base
   validates_presence_of :name
   validates_uniqueness_of :name
+
+  def self.description
+    'List of states and territories with accompanying Postal abbreviation.'+
+    ' https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations'
+  end
 
   def self.seed
     [[1, 'AK',  'Alaska'],
