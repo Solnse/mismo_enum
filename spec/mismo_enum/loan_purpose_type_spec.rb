@@ -14,12 +14,13 @@ module MismoEnum
       end
 
       it "includes LoanPurposeType descriptions" do
-        expect(unknown.description).to eq('Often referred to as T-Bill')
+        expect(unknown.description).to eq('Loan Purpose has not been reported '+
+                                          'or is not known.')
       end
 
       it "allows id to be assigned during creation by seed" do
         # seed is already run before(:suite)
-        expect(unknown.id).to eq(8)
+        expect(unknown.id).to eq(5)
       end
     end
   end

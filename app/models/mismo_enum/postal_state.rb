@@ -1,5 +1,5 @@
 # app/models/mismo_enum/postal_state.rb
-# enum
+# utility enum (not mismo)
 
 class MismoEnum::PostalState < MismoEnum::Base
   validates_presence_of :name

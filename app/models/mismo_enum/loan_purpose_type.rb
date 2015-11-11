@@ -18,7 +18,7 @@ class MismoEnum::LoanPurposeType < MismoEnum::Base
      [3, 'MortgageModification', 'Terms of the mortgage are modified from the '+
         'original terms agreed to by the lender and borrower'],
      [4, 'Other', ''],
-     [5, 'Unknown', ' Loan Purpose has not been reported or is not known.']
+     [5, 'Unknown', 'Loan Purpose has not been reported or is not known.']
     ].each { |id, entry, desc| create(id:          id,
                                       name:        entry,
                                       description: desc) }

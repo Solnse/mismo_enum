@@ -79,6 +79,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_loan_purpose_types", ["name"], name: "index_mismo_enum_loan_purpose_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_loan_state_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_loan_state_types", ["name"], name: "index_mismo_enum_loan_state_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_marital_status_types", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"

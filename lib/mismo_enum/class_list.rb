@@ -14,6 +14,7 @@ module MismoEnum::ClassList
     automated_underwriting_system_type
     index_type
     loan_purpose_type
+    loan_state_type
     mortgage_type
     prepayment_penalty_option_type
     rate_lock_type
