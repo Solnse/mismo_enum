@@ -30,6 +30,20 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_automated_underwriting_system_types", ["name"], name: "index_mismo_enum_automated_underwriting_system_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_bankruptcy_disposition_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_bankruptcy_disposition_types", ["name"], name: "index_mismo_enum_bankruptcy_disposition_types_on_name", unique: true, using: :btree
+
+  create_table "mismo_enum_bankruptcy_status_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_bankruptcy_status_types", ["name"], name: "index_mismo_enum_bankruptcy_status_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_borrower_classification_types", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"
@@ -57,6 +71,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
   end
 
   add_index "mismo_enum_definition_of_value_types", ["name"], name: "index_mismo_enum_definition_of_value_types_on_name", unique: true, using: :btree
+
+  create_table "mismo_enum_foreclosure_status_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_foreclosure_status_types", ["name"], name: "index_mismo_enum_foreclosure_status_types_on_name", unique: true, using: :btree
 
   create_table "mismo_enum_gender_types", force: :cascade do |t|
     t.string "name",        null: false
