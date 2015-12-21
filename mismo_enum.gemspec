@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/Solnse/mismo_enum"
   s.summary     = "MISMO enumerations for use in mortgage banking."
   s.description = s.summary
-  s.license     = ["MIT"]
+  s.licenses    = ["MIT"]
 
   s.files = Dir["{app,config,db,lib}/**/*",
     "MIT-LICENSE", "Rakefile", "README.rdoc"]
