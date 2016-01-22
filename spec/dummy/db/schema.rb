@@ -86,6 +86,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_gender_types", ["name"], name: "index_mismo_enum_gender_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_index_source_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_index_source_types", ["name"], name: "index_mismo_enum_index_source_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_index_types", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"

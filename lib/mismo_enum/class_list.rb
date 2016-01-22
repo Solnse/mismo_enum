@@ -1,6 +1,6 @@
 module MismoEnum::ClassList
 
-# alphabetic order
+  # alphabetic order
   BORROWER_ENUMS = %w{
     bankruptcy_disposition_type
     bankruptcy_status_type
@@ -15,6 +15,7 @@ module MismoEnum::ClassList
     amortization_type
     automated_underwriting_system_type
     foreclosure_status_type
+    index_source_type
     index_type
     loan_purpose_type
     loan_state_type
