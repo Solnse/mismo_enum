@@ -100,6 +100,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
 
   add_index "mismo_enum_index_types", ["name"], name: "index_mismo_enum_index_types_on_name", unique: true, using: :btree
 
+  create_table "mismo_enum_loan_delinquency_status_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_loan_delinquency_status_types", ["name"], name: "index_mismo_enum_loan_delinquency_status_types_on_name", unique: true, using: :btree
+
   create_table "mismo_enum_loan_purpose_types", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"
@@ -127,6 +134,13 @@ ActiveRecord::Schema.define(version: 20150617144840) do
   end
 
   add_index "mismo_enum_mortgage_types", ["name"], name: "index_mismo_enum_mortgage_types_on_name", unique: true, using: :btree
+
+  create_table "mismo_enum_payment_delinquency_status_types", force: :cascade do |t|
+    t.string "name",        null: false
+    t.text   "description"
+  end
+
+  add_index "mismo_enum_payment_delinquency_status_types", ["name"], name: "index_mismo_enum_payment_delinquency_status_types_on_name", unique: true, using: :btree
 
   create_table "mismo_enum_postal_states", force: :cascade do |t|
     t.string "name",        null: false

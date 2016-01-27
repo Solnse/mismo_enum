@@ -17,9 +17,11 @@ module MismoEnum::ClassList
     foreclosure_status_type
     index_source_type
     index_type
+    loan_delinquency_status_type
     loan_purpose_type
     loan_state_type
     mortgage_type
+    payment_delinquency_status_type
     prepayment_penalty_option_type
     rate_lock_type
     refinance_cash_out_determination_type

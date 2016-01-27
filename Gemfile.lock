@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mismo_enum (0.1.0)
+    mismo_enum (0.1.2)
 
 GEM
   remote: http://rubygems.org/
@@ -131,3 +131,6 @@ DEPENDENCIES
   pg
   rails (~> 4.2.1)
   rspec-rails (~> 3.0)
+
+BUNDLED WITH
+   1.11.2
