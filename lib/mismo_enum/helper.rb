@@ -1,0 +1,3 @@
+class MismoEnum::Helper
+
+end
